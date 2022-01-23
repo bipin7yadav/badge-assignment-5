@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 19px;
+            
+
+        }
+
+        button{
+            position: relative;
+            margin-left: 12px;
+            background-color: white;
+            border-color: white;
+            padding: 10px;
+        }
+
+        #span1{
+            position: fixed;
+            background-color: blue;
+            padding: 3px  7px;
+            border-radius:50% ;
+            font-size: 12px;
+            margin-top: -8px;
+        }
+
+        #span2{
+            position: fixed;
+            margin-top: -23px;
+            margin-left: -19px;
+            background-color: blueviolet;
+            border-radius:50% ;
+            font-size: 25px;
+            padding: 3px 10px;
+        }
+
+        #span3{
+            background-color: hotpink;
+            padding: 3px 10px;
+            border-radius: 50%;
+            position: fixed;
+            margin-top: -14px;
+            margin-left: -60px;
+        
+
+        }
+
+        #span4{
+            background-color: blue;
+            padding: 3px 8px;
+            border-radius: 50%;
+            position: fixed;
+            margin-top: -14px;
+        }
+
+        #span5{
+            position: fixed;
+            background-color: crimson;
+            font-size: 14px;
+            padding: 4px 5px;
+            border-radius: 50%;
+            margin-top: -12px;
+            margin-left: -12px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <p class="p1">Text with a badge <span id="span1">4</span></p>
+        <p class="p2">Text with large badge <span id="span2">1</span></p>
+        <p class="p3">Button with a badge on the left <button style="background-color: mediumblue;color: white;">Action <span id="span3" >8</span></button></p>
+        <p class="p4">Button toggles badge visibility <button  onclick="game()" >Hide <span id="span4" >7</span></button></p>
+        <p class="p5">Icon with a badge <span style="font-size: 27px;" class="fa fa-home"> <span id="span5" >15</span></span></p>
+    </div>
+
+    <script>
+        let count=0;
+
+        function game() {
+            if (count==0){
+                document.getElementById("span4").style.display ="none"
+
+
+                count +=1;
+            }else{
+
+                document.getElementById("span4").style.display ="inherit"
+
+
+                count -=1
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>
